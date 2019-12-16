@@ -1,6 +1,6 @@
 ﻿
 
-@model IEnumerable<Course.WebApi.Models.WeatherForecast>
+@model IEnumerable<Course.WebApi.Models.Employee>
 
 @{
     ViewData["Title"] = "List";
@@ -43,8 +43,8 @@
                     @item.Summary
                 </td>
                 <td>
-                    <a asp-controller="WeatherForecastView" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-controller="WeatherForecastView" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-controller="EmployeeView" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-controller="EmployeeView" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }

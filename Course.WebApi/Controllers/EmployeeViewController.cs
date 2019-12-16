@@ -7,10 +7,10 @@ namespace Course.WebApi.Controllers
 {
 
     [Route("[controller]/[Action]")]
-    public class WeatherForecastViewController : Controller
+    public class EmployeeViewController : Controller
     {
-        private readonly IWeatherForecastRepo _weatherForecastRepo;
-        public WeatherForecastViewController(IWeatherForecastRepo weatherForecastRepo)
+        private readonly IEmployeeRepo _weatherForecastRepo;
+        public EmployeeViewController(IEmployeeRepo weatherForecastRepo)
         {
             _weatherForecastRepo = weatherForecastRepo;
         }
@@ -30,7 +30,7 @@ namespace Course.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit([FromForm]WeatherForecast weatherForecast, [FromQuery]int id)
+        public IActionResult Edit([FromForm]Employee weatherForecast, [FromQuery]int id)
         {
             _weatherForecastRepo.Update(weatherForecast, id);
             return RedirectToAction("List", "WeatherForecastView");

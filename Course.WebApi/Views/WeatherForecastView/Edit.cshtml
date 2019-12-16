@@ -1,11 +1,11 @@
 ﻿
-@model Course.WebApi.Models.WeatherForecast
+@model Course.WebApi.Models.Employee
 @{
     ViewData["Title"] = "Edit";
 }
 
 
-<form asp-controller="WeatherForecastView" asp-action="Edit" asp-route-id="@Model.Id"  method="post" class="form-group m-auto w-25">
+<form asp-controller="EmployeeView" asp-action="Edit" asp-route-id="@Model.Id"  method="post" class="form-group m-auto w-25">
 
     <label for="editSummary">Summary:</label>
     <input asp-for="Summary" name="Summary" type="text" id="editSummary" placeholder="summary" class="form-control" value="@Model.Summary" />
